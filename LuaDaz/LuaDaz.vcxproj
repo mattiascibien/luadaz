@@ -202,13 +202,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="converters.h" />
+    <ClInclude Include="LuaDazPlugin.h" />
     <ClInclude Include="luadzaction.h" />
     <ClInclude Include="plugininfo.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="version.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pluginmain.cpp" />
+    <ClCompile Include="LuaDazPlugin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LuaDaz.def" />
