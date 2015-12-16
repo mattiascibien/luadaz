@@ -14,8 +14,7 @@ LuaDazPlugin::LuaDazPlugin() :
 
 LuaDazPlugin::~LuaDazPlugin()
 {
-	if(luaState)
-		delete luaState;
+
 }
 
 void LuaDazPlugin::startup()
