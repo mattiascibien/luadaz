@@ -13,6 +13,12 @@ class LuaConsolePaneAction :
 	Q_OBJECT
 public:
 	LuaConsolePaneAction() : DzPaneAction("LuaConsolePane") { }
+
+	void init() override
+	{
+		DzPaneAction::init();
+		setIcon("luadaz/images/lua-logo.png");
+	}
 };
 
 class LuaConsolePane :

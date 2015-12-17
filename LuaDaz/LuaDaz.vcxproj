@@ -105,7 +105,8 @@
     </Link>
     <PostBuildEvent>
       <Message>Copying to DAZStudio plugins directory</Message>
-      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR32)\plugins\"</Command>
+      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR32)\plugins\"
+xcopy /y /s /e "$(ProjectDir)\resources\*" "$(DAZDIR32)\resources\"</Command>
     </PostBuildEvent>
     <ResourceCompile>
       <AdditionalIncludeDirectories>$(DAZSDKDIR)\include;..\lua-5.3.2\src;..\luabind\</AdditionalIncludeDirectories>
@@ -128,7 +129,8 @@
       <ModuleDefinitionFile>LuaDaz.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR64)\plugins\"</Command>
+      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR64)\plugins\"
+xcopy /y /s /e "$(ProjectDir)\resources\*" "$(DAZDIR64)\resources\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copying to DAZStudio plugins directory</Message>
@@ -161,7 +163,8 @@
       <ModuleDefinitionFile>PyDaz.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR32)\plugins\"</Command>
+      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR32)\plugins\"
+xcopy /y /s /e "$(ProjectDir)\resources\*" "$(DAZDIR32)\resources\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copying to DAZStudio plugins directory</Message>
@@ -191,7 +194,8 @@
       <ModuleDefinitionFile>PyDaz.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR64)\plugins\"</Command>
+      <Command>copy /Y "$(OutDir)$(TargetFileName)" "$(DAZDIR64)\plugins\"
+xcopy /y /s /e "$(ProjectDir)\resources\*" "$(DAZDIR64)\resources\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copying to DAZStudio plugins directory</Message>

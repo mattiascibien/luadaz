@@ -18,6 +18,7 @@ LuaDazPlugin::~LuaDazPlugin()
 void LuaDazPlugin::startup()
 {
 	luaState = luaL_newstate();
+	luaL_openlibs(luaState);
 	luabind::open(luaState);
 }
 
