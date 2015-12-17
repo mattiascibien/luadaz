@@ -233,4 +233,7 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
+#Qt MOCS
+*_moc.cpp
+
 

@@ -202,13 +202,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="converters.h" />
+    <CustomBuild Include="LuaConsolePane.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DAZSDKDIR)\bin\$(Platform)\moc "%(FullPath)" -o "%(Filename)_moc.cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Mocing "%(Filename)"...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DAZSDKDIR)\bin\$(Platform)\moc "%(FullPath)" -o "%(Filename)_moc.cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Mocing "%(Filename)"...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(DAZSDKDIR)\bin\$(Platform)\moc "%(FullPath)" -o "%(Filename)_moc.cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Mocing "%(Filename)"...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(DAZSDKDIR)\bin\$(Platform)\moc "%(FullPath)" -o "%(Filename)_moc.cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Mocing "%(Filename)"...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)_moc.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)_moc.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)_moc.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename)_moc.cpp</Outputs>
+    </CustomBuild>
     <ClInclude Include="LuaDazPlugin.h" />
     <ClInclude Include="luadzaction.h" />
     <ClInclude Include="plugininfo.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LuaConsolePane.cpp" />
+    <ClCompile Include="LuaConsolePane_moc.cpp" />
     <ClCompile Include="LuaDazPlugin.cpp" />
+    <ClCompile Include="plugindef.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LuaDaz.def" />

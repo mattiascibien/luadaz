@@ -2,6 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="LuaDazPlugin.cpp" />
+    <ClCompile Include="LuaConsolePane.cpp" />
+    <ClCompile Include="LuaConsolePane_moc.cpp" />
+    <ClCompile Include="plugindef.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="plugininfo.h" />
@@ -15,5 +18,8 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LuaDaz.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="LuaConsolePane.h" />
   </ItemGroup>
 </Project>
